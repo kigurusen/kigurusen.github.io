@@ -1,0 +1,29 @@
+body {
+	background-color: #121230;
+	color: #bbf;
+}
+
+h1 {
+	margin-top: 5rem;
+	font-size: 64pt;
+	text-align: center;
+}
+
+h2 {
+	margin-top: 5rem;
+	font-size: 40pt;
+	text-align: center;
+	margin-bottom: 2.5rem;
+}
+
+main p {
+	text-align: center;
+}
+
+.project {
+	position: relative;
+	display: flex;
+	align-items: center;
+	width: 100rem;
+	height: 250rem;
+}
