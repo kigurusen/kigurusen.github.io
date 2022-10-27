@@ -50,7 +50,7 @@ main {
 .project:hover {
 	background-color: #1b1b48;
 	translate: -5px -5px;
-	box-shadow: 5px 5px 5px 5px #090918;
+	box-shadow: 5px 5px 5px 5px #060610;
 	transition: .1s ease-in-out;
 }
 
@@ -79,4 +79,19 @@ main {
 
 .lnk:hover {
 	color: #cdf;
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	margin-top: 2rem;
+}
+
+footer img {
+	width: 3rem;
+	padding: 5px;
+}
+
+footer a {
+	text-decoration: none;
 }
