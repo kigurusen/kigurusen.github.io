@@ -1,29 +1,74 @@
+@font-face {
+	font-family: "Comfortaa-Regular";
+	src: url("Comfortaa-Regular.ttf");
+}
+
 body {
 	background-color: #121230;
-	color: #bbf;
-}
+	color: #cdf;
+	text-align: center;
+	font-family: "Comfortaa-Regular";
+}	
 
-h1 {
+#welcome {
 	margin-top: 5rem;
 	font-size: 64pt;
-	text-align: center;
 }
 
-h2 {
-	margin-top: 5rem;
+.newSec {
+	margin: 5rem 0 2.5rem 0;
 	font-size: 40pt;
-	text-align: center;
-	margin-bottom: 2.5rem;
 }
 
-main p {
-	text-align: center;
-}
-
-.project {
-	position: relative;
+main {
 	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.project {	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	align-items: center;
-	width: 100rem;
-	height: 250rem;
+
+	margin: 5px;
+	border: 2px solid #cdf;
+	border-radius: 10px;
+	
+	width: 20rem;
+	height: 25rem;
+
+	transition: .1s ease-in-out;
+}
+
+.project:hover {
+	background-color: #1b1b48;
+	translate: -5px -5px;
+	box-shadow: 5px 5px black;
+	transition: .1s ease-in-out;
+	/* add simple animation stuff */
+}
+
+.project a {
+	z-index: 2;
+}
+
+.project span {
+	position:absolute; 
+	width:100%;
+	height:100%;
+	top:0;
+	left: 0;
+  
+	z-index: 1;
+}
+
+.lnk {
+	color: cadetblue;
+	margin: 2px
+}
+
+.lnk:hover {
+	color: #cdf;
 }
