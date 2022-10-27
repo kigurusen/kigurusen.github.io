@@ -1,0 +1,97 @@
+@font-face {
+	font-family: "Comfortaa-Regular";
+	src: url("Comfortaa-Regular.ttf");
+}
+
+body {
+	background-color: #121230;
+	color: #cdf;
+	text-align: center;
+	font-family: "Comfortaa-Regular";
+}	
+
+#welcome {
+	margin-top: 5rem;
+	font-size: 64pt;
+}
+
+.newSec {
+	margin: 5rem 0 2.5rem 0;
+	font-size: 40pt;
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.project img {
+	height: 7.5rem;
+}
+
+.project {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	margin: 5px;
+	border: 2px solid #cdf;
+	border-radius: 10px;
+	
+	width: 20rem;
+	height: 25rem;
+
+	transition: .1s ease-in-out;
+}
+
+.project:hover {
+	background-color: #1b1b48;
+	translate: -5px -5px;
+	box-shadow: 5px 5px 5px 5px #060610;
+	transition: .1s ease-in-out;
+}
+
+.project div {
+	margin-bottom: 15px;
+}
+
+.project a {
+	z-index: 2;
+}
+
+.project span {
+	position:absolute; 
+	width:100%;
+	height:100%;
+	top:0;
+	left: 0;
+  
+	z-index: 1;
+}
+
+.lnk {
+	color: cadetblue;
+	padding: 3px
+}
+
+.lnk:hover {
+	color: #cdf;
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	margin-top: 2rem;
+}
+
+footer img {
+	width: 3rem;
+	padding: 5px;
+}
+
+footer a {
+	text-decoration: none;
+}
