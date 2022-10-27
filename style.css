@@ -26,7 +26,12 @@ main {
 	flex-wrap: wrap;
 }
 
-.project {	
+.project img {
+	height: 7.5rem;
+}
+
+.project {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -45,9 +50,12 @@ main {
 .project:hover {
 	background-color: #1b1b48;
 	translate: -5px -5px;
-	box-shadow: 5px 5px black;
+	box-shadow: 5px 5px 5px 5px #090918;
 	transition: .1s ease-in-out;
-	/* add simple animation stuff */
+}
+
+.project div {
+	margin-bottom: 15px;
 }
 
 .project a {
@@ -66,7 +74,7 @@ main {
 
 .lnk {
 	color: cadetblue;
-	margin: 2px
+	padding: 3px
 }
 
 .lnk:hover {
