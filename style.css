@@ -95,8 +95,8 @@ footer {
 
 	background-color: #10102a;
 	border: 2px solid #060610;
-	border-radius: 50pt 50pt 0 0;
-	box-shadow: 0 0 5px 2px #060610, inset 0 0 5px 2px #060610;
+	border-radius: 100px 100px 0 0;
+	box-shadow: 0 0 5px 3px #060610, inset 0 0 5px 3px #060610;
 	
 	z-index: 3;
 }
