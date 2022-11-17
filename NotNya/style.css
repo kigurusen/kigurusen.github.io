@@ -1,0 +1,102 @@
+@font-face {
+	font-family: "Comfortaa-Regular";
+	src: url("../Comfortaa-Regular.ttf");
+}
+
+body {
+	background-color: #121230;
+	color: #cdf;
+	text-align: center;
+	font-family: "Comfortaa-Regular";
+	margin: 0 0 5.5rem;
+	width: 100%;
+}	
+
+#welcome {
+	margin: 5rem 0 0 0;
+	font-size: 64pt;
+}
+
+#logo {
+	width: 25rem;
+	margin: 0;
+	padding: 0;
+}
+
+main {
+	font-size: 12pt;
+}
+
+main ul {
+	text-align: left;
+	margin: auto;
+	width: 90%;
+}
+
+main li {
+	padding: 2px 0 2px 0;
+}
+
+#features {
+	max-width: 40rem;
+}
+
+.btnSec {
+	margin: 2rem 2rem 0 2rem;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+.btnSec a {
+	width: 100%;
+	max-width: 50rem;
+	
+	color: #cdf;
+	font-size: 14pt;
+	padding: 1rem;
+	border: 2px solid #cdf;
+	border-radius: 10px;
+	
+	transition: .1s ease-in-out;
+}
+
+.btnSec a:hover {
+	background-color: #1b1b48;
+	translate: -5px -5px;
+	box-shadow: 5px 5px 5px 5px #060610;
+	transition: .1s ease-in-out;
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	position: fixed;
+	bottom: -1rem;
+	right: 0;
+	left: 0;
+	padding-bottom: 5px;
+
+	background-color: #10102a;
+	border: 2px solid #060610;
+	border-radius: 100px 100px 0 0;
+	box-shadow: 0 0 5px 3px #060610, inset 0 0 5px 3px #060610;
+	
+	z-index: 3;
+}
+
+footer img {
+	margin-top: 1rem;
+	margin-bottom: 0.5rem;
+	width: 3rem;
+	padding: 5px;
+}
+
+footer a {
+	text-decoration: none;
+}
