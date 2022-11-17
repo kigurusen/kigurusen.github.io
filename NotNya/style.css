@@ -13,7 +13,7 @@ body {
 }	
 
 #welcome {
-	margin: 5rem 0 0 0;
+	margin: 5rem 0 0;
 	font-size: 64pt;
 }
 
@@ -34,7 +34,7 @@ main ul {
 }
 
 main li {
-	padding: 2px 0 2px 0;
+	padding: 2px 0;
 }
 
 #features {
@@ -42,7 +42,7 @@ main li {
 }
 
 .btnSec {
-	margin: 2rem 2rem 0 2rem;
+	margin: 2rem 2rem 0;
 
 	display: flex;
 	flex-direction: column;
