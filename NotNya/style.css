@@ -19,17 +19,17 @@ body {
 
 #logo {
 	width: 25rem;
-	margin: 0;
+	margin: 0 0 2rem;
 	padding: 0;
 }
 
 main {
-	font-size: 12pt;
+	font-size: 18pt;
 }
 
 main ul {
 	text-align: left;
-	margin: auto;
+	margin: auto auto 4rem;
 	width: 90%;
 }
 
@@ -38,7 +38,7 @@ main li {
 }
 
 #features {
-	max-width: 40rem;
+	max-width: fit-content;
 }
 
 .btnSec {
@@ -48,16 +48,16 @@ main li {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	gap: 10px;
+	gap: 1rem;
 }
 
 .btnSec a {
-	width: 100%;
-	max-width: 50rem;
+	width: 90%;
+	max-width: 100rem;
 	
 	color: #cdf;
-	font-size: 14pt;
-	padding: 1rem;
+	font-size: 20pt;
+	padding: 2rem;
 	border: 2px solid #cdf;
 	border-radius: 10px;
 	
