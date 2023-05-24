@@ -37,7 +37,7 @@ main li {
 	padding: 2px 0;
 }
 
-#features {
+.features {
 	max-width: fit-content;
 }
 
