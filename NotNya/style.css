@@ -1,6 +1,6 @@
 @font-face {
 	font-family: "Comfortaa-Regular";
-	src: url("Comfortaa-Regular.ttf");
+	src: url("../Comfortaa-Regular.ttf");
 }
 
 body {
@@ -13,74 +13,62 @@ body {
 }	
 
 #welcome {
-	margin-top: 5rem;
+	margin: 2rem 0 5rem;
 	font-size: 64pt;
 }
 
-.newSec {
-	margin: 5rem 0 2.5rem;
-	font-size: 40pt;
+#logo {
+	width: 25rem;
+	margin: 5rem 0 0;
+	padding: 0;
 }
 
 main {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
+	font-size: 18pt;
 }
 
-.project img {
-	height: 7.5rem;
+main ul {
+	text-align: left;
+	margin: auto auto 4rem;
+	width: 90%;
 }
 
-.project {
-	position: relative;
+main li {
+	padding: 2px 0;
+}
+
+.features {
+	max-width: fit-content;
+}
+
+.btnSec {
+	margin: 2rem 2rem 0;
+
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	gap: 1rem;
+}
 
-	margin: 5px;
+.btnSec a {
+	width: 90%;
+	max-width: 100rem;
+	
+	color: #cdf;
+	font-size: 20pt;
+	padding: 2rem;
 	border: 2px solid #cdf;
 	border-radius: 10px;
 	
-	width: 20rem;
-	height: 25rem;
-
 	transition: .1s ease-in-out;
 }
 
-.project:hover {
+.btnSec a:hover {
 	background-color: #1b1b48;
 	translate: -5px -5px;
 	box-shadow: 5px 5px 5px 5px #060610;
 	transition: .1s ease-in-out;
-}
-
-.project div {
-	margin-bottom: 15px;
-}
-
-.project a {
-	z-index: 2;
-}
-
-.project span {
-	position: absolute; 
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-  
-	z-index: 1;
-}
-
-.lnk {
-	color: cadetblue;
-	padding: 3px
-}
-
-.lnk:hover {
-	color: #cdf;
 }
 
 footer {
