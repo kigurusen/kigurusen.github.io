@@ -49,12 +49,28 @@ main {
 	transition: .1s ease-in-out;
 }
 
-.project:hover {
-	background-color: #1b1b48;
-	translate: -5px -5px;
-	box-shadow: 5px 5px 5px 5px #060610;
-	transition: .1s ease-in-out;
+@media (pointer:coarse) {
+	.project:active {
+		background-color: #10102a;
+		translate: 0 3px;
+		transition: .1s ease-out;
+	}
 }
+
+@media (pointer:none), (pointer:fine) {
+	.project:hover {
+		background-color: #1b1b48;
+		translate: -5px -5px;
+		box-shadow: 5px 5px 5px 5px #060610;
+		transition: .1s ease-in-out;
+	}	
+	
+	.project:active {
+		background-color: #10102a;
+		translate: -5px -2px;
+		transition: .1s ease-out;
+	}	
+}	
 
 .project div {
 	margin-bottom: 15px;
