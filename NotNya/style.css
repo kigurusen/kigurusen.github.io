@@ -1,16 +1,4 @@
-@font-face {
-	font-family: "Comfortaa-Regular";
-	src: url("../Comfortaa-Regular.ttf");
-}
-
-body {
-	background-color: #121230;
-	color: #cdf;
-	text-align: center;
-	font-family: "Comfortaa-Regular";
-	margin: 0 0 6.5rem;
-	width: 100%;
-}	
+@import 'base.css';
 
 #welcome {
 	margin: 2rem 0 5rem;
@@ -54,65 +42,35 @@ main li {
 .btnSec a {
 	width: 90%;
 	max-width: 100rem;
-	
+
 	color: #cdf;
 	font-size: 20pt;
 	padding: 2rem;
 	border: 2px solid #cdf;
 	border-radius: 10px;
-	
-	transition: .1s ease-in-out;
+
+	transition: 0.1s ease-in-out;
 }
 
-@media (pointer:coarse) {
+@media (pointer: coarse) {
 	.btnSec a:active {
 		background-color: #10102a;
 		translate: 0 3px;
-		transition: .1s ease-out;
+		transition: 0.1s ease-out;
 	}
 }
 
-@media (pointer:none), (pointer:fine) {
+@media (pointer: none), (pointer: fine) {
 	.btnSec a:hover {
 		background-color: #1b1b48;
 		translate: -5px -5px;
 		box-shadow: 5px 5px 5px 5px #060610;
-		transition: .1s ease-in-out;
+		transition: 0.1s ease-in-out;
 	}
 
 	.btnSec a:active {
 		background-color: #10102a;
 		translate: -5px -2px;
-		transition: .1s ease-out;
+		transition: 0.1s ease-out;
 	}
-}
-
-footer {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	
-	position: fixed;
-	bottom: -1rem;
-	right: 0;
-	left: 0;
-	padding-bottom: 5px;
-
-	background-color: #10102a;
-	border: 2px solid #060610;
-	border-radius: 100px 100px 0 0;
-	box-shadow: 0 0 5px 3px #060610, inset 0 0 5px 3px #060610;
-	
-	z-index: 3;
-}
-
-footer img {
-	margin-top: 1rem;
-	margin-bottom: 0.5rem;
-	width: 3rem;
-	padding: 5px;
-}
-
-footer a {
-	text-decoration: none;
 }
