@@ -1,0 +1,78 @@
+:root {
+    --shadows: #060610; /* main / 3 */
+    --bg-main: #121230; /* main colour */
+    --bg-light: #1b1b48; /* main * 1.5 */
+    --c1: #242460; /* currently unused and unnamed shade */
+    --c2: #30307e; /* currently unused and unnamed shade */
+    --c3: #4848c0; /* currently unused and unnamed shade */
+    --c4: #6060fc; /* currently unused and unnamed shade */
+
+    --accent-shadows: #061010;
+    --accent-main: #102a2a;
+    --accent-light: #246060;
+    --accent-text-dark: #307e7e;
+    --accent-text: #48c0c0;
+    --accent-text-light: #90fcfc;
+
+    --text-dark: #8892aa;
+    --text: #ccddff;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text);
+    text-align: center;
+    font-family: 'Comfortaa';
+    margin: 0 0 6.5rem;
+    width: 100%;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+
+    height: fit-content;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding-bottom: 5px;
+
+    background-color: var(--accent-main);
+    border: 2px solid var(--shadows);
+    border-radius: 100px 100px 0 0;
+    box-shadow: 0 0 5px 3px var(--shadows), inset 0 0 5px 3px var(--shadows);
+
+    z-index: 3;
+}
+
+#footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: fit-content;
+}
+
+#footer-links img {
+    width: 3rem;
+    padding: 5px;
+}
+
+#footer-links a {
+    text-decoration: none;
+}
+
+#copy {
+    min-height: fit-content;
+    align-self: self-end;
+    margin-right: 1rem;
+    margin-top: -0.5rem;
+}
+
+@media (min-width: 42rem) {
+    #copy {
+        position: absolute;
+        bottom: 1rem;
+        right: 2rem;
+    }
+}
