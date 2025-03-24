@@ -23,8 +23,8 @@ body {
     color: var(--text);
     text-align: center;
     font-family: 'Comfortaa';
-    margin: 0 0 6.5rem;
-    width: 100%;
+    margin: 0;
+    padding-bottom: 6.5rem;
 }
 
 footer {
@@ -33,15 +33,16 @@ footer {
 
     height: fit-content;
     position: fixed;
-    bottom: 0;
+    bottom: -1rem;
     right: 0;
     left: 0;
-    padding-bottom: 5px;
+    padding: 0.5rem 0 1rem;
 
     background-color: var(--accent-main);
-    border: 2px solid var(--shadows);
-    border-radius: 100px 100px 0 0;
-    box-shadow: 0 0 5px 3px var(--shadows), inset 0 0 5px 3px var(--shadows);
+    border: 0.1rem solid var(--shadows);
+    border-radius: 7rem 7rem 0 0;
+    box-shadow: 0 0 0.5rem 0.2rem var(--shadows),
+        inset 0 0 0.5rem 0.2rem var(--shadows);
 
     z-index: 3;
 }
@@ -55,24 +56,37 @@ footer {
 
 #footer-links img {
     width: 3rem;
-    padding: 5px;
+    padding: 0.5rem 0.3rem;
 }
 
 #footer-links a {
     text-decoration: none;
 }
 
+#footer-links a:focus {
+    border-radius: 25px;
+    background-color: var(--accent-light);
+}
+
 #copy {
     min-height: fit-content;
     align-self: self-end;
-    margin-right: 1rem;
+    margin-right: 2rem;
     margin-top: -0.5rem;
 }
 
 @media (min-width: 42rem) {
+    body {
+        padding-bottom: 5rem;
+    }
+
+    footer {
+        padding-bottom: 0.5rem;
+    }
+
     #copy {
         position: absolute;
         bottom: 1rem;
-        right: 2rem;
+        right: 0;
     }
 }
