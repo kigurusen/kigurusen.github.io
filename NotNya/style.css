@@ -1,76 +1,87 @@
-@import 'base.css';
-
-#welcome {
-	margin: 2rem 0 5rem;
-	font-size: 64pt;
-}
+@import '/base.css';
 
 #logo {
-	width: 25rem;
-	margin: 5rem 0 0;
-	padding: 0;
+    width: 7.5rem;
+    margin-top: 2rem;
+}
+
+#info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+ul {
+    text-align: left;
+    margin: 0 auto;
+    width: 90%;
+    max-width: fit-content;
+}
+
+li {
+    padding: 0.25rem 0;
 }
 
 main {
-	font-size: 18pt;
+    padding: 2rem 2rem 0;
+    text-wrap: balance;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--button-gap);
 }
 
-main ul {
-	text-align: left;
-	margin: auto auto 4rem;
-	width: 90%;
+main a {
+    width: fit-content;
+    min-width: fit-content;
+    flex-grow: 1;
+    flex-basis: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: var(--button-height);
+    text-decoration: none;
+
+    color: var(--text);
+    padding: 0 1rem;
+    border: var(--button-border) solid var(--text);
+    border-radius: var(--border-radius);
+
+    transition: var(--anim-duration) ease-in-out;
 }
 
-main li {
-	padding: 2px 0;
-}
+@media (min-width: 70rem) {
+    body {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        height: calc(100vh - 5rem);
+    }
 
-.features {
-	max-width: fit-content;
-}
+    #info {
+        overflow-y: scroll;
+        padding-bottom: 1rem;
+        max-height: calc(100vh - 6rem);
+        width: 60vw;
+        min-width: 42rem;
+    }
 
-.btnSec {
-	margin: 2rem 2rem 0;
+    main {
+        flex-direction: column;
+        flex-wrap: nowrap;
 
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	gap: 1rem;
-}
+        overflow-y: scroll;
+        padding-bottom: 1rem;
+        max-height: calc(100vh - 8rem);
+        width: 40vw;
+        min-width: 28rem;
+    }
 
-.btnSec a {
-	width: 90%;
-	max-width: 100rem;
-
-	color: #cdf;
-	font-size: 20pt;
-	padding: 2rem;
-	border: 2px solid #cdf;
-	border-radius: 10px;
-
-	transition: 0.1s ease-in-out;
-}
-
-@media (pointer: coarse) {
-	.btnSec a:active {
-		background-color: #10102a;
-		translate: 0 3px;
-		transition: 0.1s ease-out;
-	}
-}
-
-@media (pointer: none), (pointer: fine) {
-	.btnSec a:hover {
-		background-color: #1b1b48;
-		translate: -5px -5px;
-		box-shadow: 5px 5px 5px 5px #060610;
-		transition: 0.1s ease-in-out;
-	}
-
-	.btnSec a:active {
-		background-color: #10102a;
-		translate: -5px -2px;
-		transition: 0.1s ease-out;
-	}
+    main a {
+        width: 90%;
+        flex-grow: 0;
+    }
 }
