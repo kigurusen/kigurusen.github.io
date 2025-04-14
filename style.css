@@ -140,7 +140,7 @@ main {
     }
 
     main {
-        overflow-y: scroll;
+        overflow-y: auto;
         padding-bottom: 1rem;
         max-height: calc(100vh - 6rem);
         width: 60vw;
@@ -148,7 +148,7 @@ main {
     }
 
     #about {
-        overflow-y: scroll;
+        overflow-y: auto;
         padding-bottom: 1rem;
         max-height: calc(100vh - 6rem);
         width: 40vw;

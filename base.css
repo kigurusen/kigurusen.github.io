@@ -28,6 +28,25 @@
     --main-img-size: 7.5rem; /* width and/or height of the main image (e.g. "about me") */
 }
 
+/* scrollbar styling for chromium based browsers */
+::-webkit-scrollbar {
+    width: 0.4rem;
+    height: 0.4rem;
+}
+
+::-webkit-scrollbar-track {
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--text-dark);
+    border-radius: 0.2rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text);
+}
+
 body {
     background-color: var(--bg-main);
     color: var(--text);
@@ -91,12 +110,6 @@ footer {
     margin-top: -0.5rem;
 }
 
-/* Unified style for focusable buttons and tiles. */
-.focusable:focus-visible {
-    border: var(--button-border) solid var(--accent-text);
-    box-shadow: inset 0 0 2rem 1rem var(--accent-light);
-}
-
 /* Unified style for activatable buttons and tiles. */
 .activatable:active {
     background-color: var(--accent-main);
@@ -120,6 +133,12 @@ footer {
         translate: var(--hover-dist-neg)
             calc(var(--press-dist) - var(--hover-dist));
     }
+}
+
+/* Unified style for focusable buttons and tiles. */
+.focusable:focus-visible {
+    border: var(--button-border) solid var(--accent-text);
+    box-shadow: inset 0 0 2rem 1rem var(--accent-light);
 }
 
 @media (min-width: 42rem) {
