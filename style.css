@@ -18,6 +18,7 @@ main {
     text-wrap: balance;
     max-width: 30rem;
     margin: 0 auto 2rem;
+    padding: 0 1rem;
 }
 
 #about-links {
