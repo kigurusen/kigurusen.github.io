@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
 :root {
     --shadows: #060610; /* main / 3 */
     --bg-main: #121230; /* main colour */
@@ -16,6 +18,35 @@
 
     --text-dark: #8892aa;
     --text: #ccddff;
+
+    --anim-duration: 0.1s; /* duration of animations like the hover effect */
+    --border-radius: 25px; /* border radius for buttons and tiles */
+    --button-border: 0.15rem; /* border thickness of buttons and tiles */
+    --button-height: 5rem; /* height of most buttons */
+    --button-gap: 1rem; /* default gap between buttons or tiles */
+    --hover-dist: 0.25rem; /* translation distance for hover effects */
+    --hover-dist-neg: calc(-1 * var(--hover-dist));
+    --press-dist: 0.25rem; /* y-distance for button press effects */
+    --main-img-size: 7.5rem; /* width and/or height of the main image (e.g. "about me") */
+}
+
+/* scrollbar styling for chromium based browsers */
+::-webkit-scrollbar {
+    width: 0.4rem;
+    height: 0.4rem;
+}
+
+::-webkit-scrollbar-track {
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--text-dark);
+    border-radius: 0.2rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text);
 }
 
 body {
@@ -24,7 +55,12 @@ body {
     text-align: center;
     font-family: 'Comfortaa';
     margin: 0;
-    padding-bottom: 6.5rem;
+    padding: 0 1rem 6.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text);
 }
 
 footer {
@@ -44,7 +80,7 @@ footer {
     box-shadow: 0 0 0.5rem 0.2rem var(--shadows),
         inset 0 0 0.5rem 0.2rem var(--shadows);
 
-    z-index: 3;
+    z-index: 999;
 }
 
 #footer-links {
@@ -56,6 +92,7 @@ footer {
 
 #footer-links img {
     width: 3rem;
+    max-height: 3rem;
     padding: 0.5rem 0.3rem;
 }
 
@@ -63,8 +100,8 @@ footer {
     text-decoration: none;
 }
 
-#footer-links a:focus {
-    border-radius: 25px;
+#footer-links a:focus-visible {
+    border-radius: var(--border-radius);
     background-color: var(--accent-light);
 }
 
@@ -73,6 +110,37 @@ footer {
     align-self: self-end;
     margin-right: 2rem;
     margin-top: -0.5rem;
+}
+
+/* Unified style for activatable (clickable) buttons and tiles. */
+.activatable:active {
+    background-color: var(--accent-main);
+    translate: 0 var(--press-dist);
+    transition: var(--anim-duration) ease-out;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    /* Unified style for elements with hover animation. */
+    .hoverable:hover {
+        background-color: var(--bg-light);
+        translate: var(--hover-dist-neg) var(--hover-dist-neg);
+        box-shadow: var(--hover-dist) var(--hover-dist) var(--hover-dist)
+            var(--hover-dist) var(--shadows);
+        transition: var(--anim-duration) ease-in-out;
+    }
+
+    /* Unified style for activatable (clickable) buttons and tiles with a hover animation. */
+    .hoverable.activatable:active {
+        background-color: var(--accent-main);
+        translate: var(--hover-dist-neg)
+            calc(var(--press-dist) - var(--hover-dist));
+    }
+}
+
+/* Unified style for focusable buttons and tiles. */
+.focusable:focus-visible {
+    border: var(--button-border) solid var(--accent-text);
+    box-shadow: inset 0 0 2rem 1rem var(--accent-light);
 }
 
 @media (min-width: 42rem) {
