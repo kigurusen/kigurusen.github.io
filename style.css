@@ -125,7 +125,7 @@ main {
     color: var(--accent-text-light);
 }
 
-@media (any-hover: hover) {
+@media (hover: hover) and (pointer: fine) {
     .tile-sublink:hover {
         color: var(--accent-text-light);
     }
