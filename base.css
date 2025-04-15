@@ -55,7 +55,7 @@ body {
     text-align: center;
     font-family: 'Comfortaa';
     margin: 0;
-    padding-bottom: 6.5rem;
+    padding: 0 1rem 6.5rem;
 }
 
 a {
@@ -112,7 +112,7 @@ footer {
     margin-top: -0.5rem;
 }
 
-/* Unified style for activatable buttons and tiles. */
+/* Unified style for activatable (clickable) buttons and tiles. */
 .activatable:active {
     background-color: var(--accent-main);
     translate: 0 var(--press-dist);
@@ -129,7 +129,7 @@ footer {
         transition: var(--anim-duration) ease-in-out;
     }
 
-    /* Unified style for activatable buttons and tiles with a hover animation. */
+    /* Unified style for activatable (clickable) buttons and tiles with a hover animation. */
     .hoverable.activatable:active {
         background-color: var(--accent-main);
         translate: var(--hover-dist-neg)
