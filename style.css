@@ -1,13 +1,17 @@
 @import 'base.css';
+/* IDEA https://1stwebdesigner.com/pure-css-navigation-menus/ */
 
 main {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: calc(2 * var(--item-gap));
+
+    padding: var(--section-padding);
 }
 
 #about {
-    margin-bottom: 3rem;
+    flex: 1;
+    padding: var(--section-padding);
 }
 
 #about-image {
@@ -15,9 +19,7 @@ main {
 }
 
 #about-text {
-    text-wrap: balance;
-    max-width: 30rem;
-    margin: 0 auto 2rem;
+    margin: 0 auto 2em;
 }
 
 #about-links {
@@ -25,8 +27,8 @@ main {
     flex-wrap: nowrap;
     flex-direction: column;
 
-    width: max-content;
-    gap: 0.5rem;
+    width: fit-content;
+    gap: calc(0.5 * var(--item-gap));
     margin: 0 auto;
     text-align: left;
 }
@@ -36,25 +38,24 @@ main {
     align-items: center;
 
     height: var(--button-height);
-    padding-right: 1rem;
+    padding-right: 1em;
     border: var(--button-border) solid var(--text);
     border-radius: var(--border-radius);
 
-    transition: var(--anim-duration) ease-in-out;
     z-index: 1; /* above content to stay clickable */
 }
 
 #about-links img {
-    max-height: 3rem;
-    width: 3rem;
-    margin: auto 1rem;
+    max-height: 3em;
+    width: 3em;
+    margin: auto 1em;
 }
 
 .tile-list {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: var(--button-gap);
+    gap: var(--item-gap);
 }
 
 .tile {
@@ -66,35 +67,33 @@ main {
     flex-grow: 0;
     flex-shrink: 0;
 
-    text-wrap: balance;
-    width: 18rem;
-    height: 23rem;
-    padding: 1rem;
+    width: 18em;
+    height: 23em;
+    padding: 1em;
 
     border: var(--button-border) solid var(--text);
     border-radius: var(--border-radius);
-
-    transition: var(--anim-duration) ease-in-out;
 }
 
 .tile-image {
-    height: 7.5rem;
-    max-width: 15rem;
+    height: 7.5em;
+    max-width: 15em;
+    border-radius: var(--border-radius);
 }
 
 .art-tile .tile-image {
-    max-height: 15rem;
+    max-height: 15em;
     max-width: none;
-    width: 18rem;
+    width: 18em;
     height: auto;
 }
 
 .tile-description {
-    margin-bottom: 1rem;
+    margin-bottom: 1em;
 }
 
 .music-tags {
-    margin-top: -0.75rem;
+    margin-top: -0.75em;
 }
 
 .tile-link {
@@ -112,7 +111,7 @@ main {
 .tile-sublink {
     z-index: 2;
     color: var(--accent-text);
-    padding: 0.2rem;
+    padding: 0.25em;
 }
 
 .tile-sublink:active {
@@ -131,36 +130,33 @@ main {
     }
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 30em) {
     body {
         display: flex;
-        flex-wrap: nowrap;
         align-items: center;
-        height: calc(100vh - 5rem);
+        overflow: hidden;
+
+        padding-bottom: 0;
     }
 
     main {
         overflow-y: auto;
-        padding-bottom: 1rem;
-        max-height: calc(100vh - 6rem);
-        width: 60vw;
-        min-width: 21rem;
+        overflow-x: hidden;
+
+        padding-bottom: var(--section-bottom-padding);
+        width: fit-content;
+        min-width: max(20em, 50dvw);
+        max-height: var(--section-height);
     }
 
     #about {
         overflow-y: auto;
-        padding-bottom: 1rem;
-        max-height: calc(100vh - 6rem);
-        width: 40vw;
-        min-width: 24rem;
+        overflow-x: hidden;
+
+        padding-bottom: var(--section-bottom-padding);
+        max-height: var(--section-height);
+        width: 40dvw;
+        min-width: 40dvw;
         margin-bottom: 0;
-    }
-
-    #about-text {
-        padding-right: 1rem;
-    }
-
-    .tile-list {
-        padding-left: 1rem;
     }
 }

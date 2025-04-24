@@ -19,21 +19,34 @@
     --text-dark: #8892aa;
     --text: #ccddff;
 
+    /* https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/ */
+    /* Linearly scale the font between 480px and 1280px viewport width */
+    font-size: clamp(0.75rem, 0.6rem + 0.5vw, 1rem);
+
     --anim-duration: 0.1s; /* duration of animations like the hover effect */
-    --border-radius: 25px; /* border radius for buttons and tiles */
-    --button-border: 0.15rem; /* border thickness of buttons and tiles */
-    --button-height: 5rem; /* height of most buttons */
-    --button-gap: 1rem; /* default gap between buttons or tiles */
-    --hover-dist: 0.25rem; /* translation distance for hover effects */
+    --border-radius: 1.5em; /* border radius for buttons and tiles */
+    --button-border: 0.15em; /* border thickness of buttons and tiles */
+    --button-height: 5em; /* height of most buttons */
+    --item-gap: 1em; /* default gap between buttons or tiles */
+    --hover-dist: 0.25em; /* translation distance for hover effects */
     --hover-dist-neg: calc(-1 * var(--hover-dist));
-    --press-dist: 0.25rem; /* y-distance for button press effects */
-    --main-img-size: 7.5rem; /* width and/or height of the main image (e.g. "about me") */
+    --press-dist: 0.25em; /* y-distance for button press effects */
+    --main-img-size: 7.5em; /* width and/or height of the main image (e.g. "about me") */
+
+    --footer-height: 5.65em; /* The height of the footer, including its padding */
+    --section-padding: 1em; /* General padding around sections that always applies */
+    --section-height: calc(
+        100dvh - var(--footer-height) - 2em
+    ); /* The height of sections in the desktop flexbox layout */
+    --section-bottom-padding: calc(
+        var(--footer-height) + 1em
+    ); /* The bottom padding of sections in the desktop flexbox layout */
 }
 
 /* scrollbar styling for chromium based browsers */
 ::-webkit-scrollbar {
-    width: 0.4rem;
-    height: 0.4rem;
+    width: 0.4em;
+    height: 0.4em;
 }
 
 ::-webkit-scrollbar-track {
@@ -42,7 +55,7 @@
 
 ::-webkit-scrollbar-thumb {
     background: var(--text-dark);
-    border-radius: 0.2rem;
+    border-radius: 0.2em;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -52,10 +65,16 @@
 body {
     background-color: var(--bg-main);
     color: var(--text);
+
     text-align: center;
+    text-wrap: balance;
     font-family: 'Comfortaa';
+
+    overflow-x: hidden;
     margin: 0;
-    padding: 0 1rem 6.5rem;
+    width: 100dvw;
+    min-height: 100dvh;
+    padding-bottom: var(--footer-height);
 }
 
 a {
@@ -67,18 +86,18 @@ footer {
     display: flex;
     flex-direction: column;
 
-    height: fit-content;
+    height: var(--footer-height);
     position: fixed;
-    bottom: -1rem;
+    bottom: -1em; /* Make the bottom shadow/outline disappear */
     right: 0;
     left: 0;
-    padding: 0.5rem 0 1rem;
+    padding: 0.5em 0;
 
     background-color: var(--accent-main);
-    border: 0.1rem solid var(--shadows);
-    border-radius: 7rem 7rem 0 0;
-    box-shadow: 0 0 0.5rem 0.2rem var(--shadows),
-        inset 0 0 0.5rem 0.2rem var(--shadows);
+    border: 0.1em solid var(--shadows);
+    border-radius: 7em 7em 0 0;
+    box-shadow: 0 0 0.5em 0.2em var(--shadows),
+        inset 0 0 0.5em 0.2em var(--shadows);
 
     z-index: 999;
 }
@@ -91,13 +110,9 @@ footer {
 }
 
 #footer-links img {
-    width: 3rem;
-    max-height: 3rem;
-    padding: 0.5rem 0.3rem;
-}
-
-#footer-links a {
-    text-decoration: none;
+    width: 3em;
+    max-height: 3em;
+    padding: 0.5em 0.75em 0;
 }
 
 #footer-links a:focus-visible {
@@ -106,10 +121,29 @@ footer {
 }
 
 #copy {
-    min-height: fit-content;
+    bottom: 1em;
+    right: 0;
     align-self: self-end;
-    margin-right: 2rem;
-    margin-top: -0.5rem;
+    margin-right: 2em;
+    margin-bottom: 0.5em;
+}
+
+@media (min-width: 30em) {
+    :root {
+        --footer-height: 4.5em;
+    }
+
+    #footer-links img {
+        width: 3em;
+        max-height: 3em;
+    }
+
+    #copy {
+        position: absolute;
+        bottom: 1em;
+        right: 0;
+        margin-bottom: 0;
+    }
 }
 
 /* Unified style for activatable (clickable) buttons and tiles. */
@@ -119,6 +153,10 @@ footer {
     transition: var(--anim-duration) ease-out;
 }
 
+.activatable {
+    transition: var(--anim-duration) ease-in-out;
+}
+
 @media (hover: hover) and (pointer: fine) {
     /* Unified style for elements with hover animation. */
     .hoverable:hover {
@@ -126,6 +164,10 @@ footer {
         translate: var(--hover-dist-neg) var(--hover-dist-neg);
         box-shadow: var(--hover-dist) var(--hover-dist) var(--hover-dist)
             var(--hover-dist) var(--shadows);
+        transition: var(--anim-duration) ease-in-out;
+    }
+
+    .hoverable {
         transition: var(--anim-duration) ease-in-out;
     }
 
@@ -140,21 +182,5 @@ footer {
 /* Unified style for focusable buttons and tiles. */
 .focusable:focus-visible {
     border: var(--button-border) solid var(--accent-text);
-    box-shadow: inset 0 0 2rem 1rem var(--accent-light);
-}
-
-@media (min-width: 42rem) {
-    body {
-        padding-bottom: 5rem;
-    }
-
-    footer {
-        padding-bottom: 0.5rem;
-    }
-
-    #copy {
-        position: absolute;
-        bottom: 1rem;
-        right: 0;
-    }
+    box-shadow: inset 0 0 2em 1em var(--accent-light);
 }
