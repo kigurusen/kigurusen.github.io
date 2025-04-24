@@ -1,14 +1,15 @@
 @import '/base.css';
 
 #logo {
-    width: 7.5rem;
-    margin-top: 2rem;
+    width: var(--main-img-size);
 }
 
 #info {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: var(--item-gap);
+
+    padding: var(--section-padding-no-h1);
 }
 
 ul {
@@ -19,69 +20,57 @@ ul {
 }
 
 li {
-    padding: 0.25rem 0;
+    padding: 0.25em 0;
 }
 
 main {
-    padding: 2rem 2rem 0;
-    text-wrap: balance;
-
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: var(--button-gap);
+    flex-direction: column;
+    gap: var(--item-gap);
+
+    padding: var(--section-padding-no-h1);
 }
 
 main a {
-    width: fit-content;
-    min-width: fit-content;
-    flex-grow: 1;
-    flex-basis: 0;
-
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: var(--button-height);
-    text-decoration: none;
+    flex-shrink: 0;
+    margin: 0 10%;
 
-    color: var(--text);
-    padding: 0 1rem;
+    height: var(--button-height);
+    padding: 0 1em;
     border: var(--button-border) solid var(--text);
     border-radius: var(--border-radius);
-
-    transition: var(--anim-duration) ease-in-out;
 }
 
-@media (min-width: 70rem) {
+@media (min-width: 30em) {
     body {
         display: flex;
-        flex-wrap: nowrap;
         align-items: center;
-        height: calc(100vh - 5rem);
+        overflow: hidden;
+
+        padding-bottom: 0;
     }
 
     #info {
-        overflow-y: scroll;
-        padding-bottom: 1rem;
-        max-height: calc(100vh - 6rem);
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        padding-bottom: var(--section-bottom-padding);
+        width: fit-content;
+        min-width: max(20em, 50dvw);
+        max-height: var(--section-height-no-h1);
         width: 60vw;
-        min-width: 42rem;
     }
 
     main {
-        flex-direction: column;
-        flex-wrap: nowrap;
+        overflow-y: auto;
+        overflow-x: hidden;
 
-        overflow-y: scroll;
-        padding-bottom: 1rem;
-        max-height: calc(100vh - 8rem);
-        width: 40vw;
-        min-width: 28rem;
-    }
-
-    main a {
-        width: 90%;
-        flex-grow: 0;
+        padding-bottom: var(--section-bottom-padding);
+        max-height: var(--section-height-no-h1);
+        width: 40dvw;
+        min-width: 40dvw;
     }
 }

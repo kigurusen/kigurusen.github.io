@@ -35,8 +35,12 @@
 
     --footer-height: 5.65em; /* The height of the footer, including its padding */
     --section-padding: 1em; /* General padding around sections that always applies */
+    --section-padding-no-h1: 2.34em 1em 1em; /* General padding around sections that always applies */
     --section-height: calc(
         100dvh - var(--footer-height) - 2em
+    ); /* The height of sections in the desktop flexbox layout */
+    --section-height-no-h1: calc(
+        100dvh - var(--footer-height) - 3.34em
     ); /* The height of sections in the desktop flexbox layout */
     --section-bottom-padding: calc(
         var(--footer-height) + 1em
