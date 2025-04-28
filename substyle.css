@@ -1,35 +1,14 @@
 @import '/base.css';
 
+:root {
+    --main-width: 60dvw;
+    --list-gap: 0.25em;
+    --button-margin: 10%;
+}
+
 #logo {
     width: var(--main-img-size);
     border-radius: var(--border-radius);
-}
-
-#info {
-    display: flex;
-    flex-direction: column;
-    gap: var(--item-gap);
-
-    padding: var(--section-padding-no-h1);
-
-    overflow-y: auto;
-    overflow-x: hidden;
-}
-
-#info p {
-    max-width: 100%;
-    overflow-x: auto;
-}
-
-ul {
-    text-align: left;
-    margin: 0 auto;
-    width: 90%;
-    max-width: fit-content;
-}
-
-li {
-    padding: 0.25em 0;
 }
 
 main {
@@ -43,12 +22,55 @@ main {
     overflow-x: hidden;
 }
 
-main a {
+main p {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.lefttext {
+    text-align: left;
+    width: fit-content;
+    margin-inline: auto;
+}
+
+.graytext {
+    color: var(--text-dark);
+}
+
+.error {
+    text-decoration-line: underline;
+    text-decoration-color: var(--error);
+}
+
+ul {
+    list-style: disc inside;
+    padding: 0;
+    margin: auto;
+}
+
+li {
+    padding: var(--list-gap) 0;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--item-gap);
+
+    padding: var(--section-padding-no-h1);
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+nav a {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    margin: 0 10%;
+    margin: 0 var(--button-margin);
 
     height: var(--button-height);
     padding: 0 1em;
@@ -64,7 +86,7 @@ main a {
         padding-bottom: 0;
     }
 
-    #info {
+    main {
         padding-bottom: var(--section-bottom-padding);
         width: fit-content;
         min-width: max(20em, 50dvw);
@@ -72,10 +94,9 @@ main a {
         width: 60vw;
     }
 
-    main {
+    nav {
         padding-bottom: var(--section-bottom-padding);
         max-height: var(--section-height-no-h1);
-        width: 40dvw;
-        min-width: 40dvw;
+        width: calc(100dvw - var(--main-width));
     }
 }
