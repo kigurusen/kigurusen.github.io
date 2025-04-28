@@ -16,12 +16,14 @@
     --accent-text: #48c0c0;
     --accent-text-light: #90fcfc;
 
+    --error: #ff4848;
+
     --text-dark: #8892aa;
     --text: #ccddff;
 
     /* https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/ */
     /* Linearly scale the font between 480px and 1280px viewport width */
-    font-size: clamp(0.75rem, 0.6rem + 0.5vw, 1rem);
+    font-size: clamp(0.75rem, 0.6rem + 0.5vmin, 1rem);
 
     --anim-duration: 0.1s; /* duration of animations like the hover effect */
     --border-radius: 1.5em; /* border radius for buttons and tiles */
