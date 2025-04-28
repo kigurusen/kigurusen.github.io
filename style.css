@@ -7,11 +7,17 @@ main {
     gap: calc(2 * var(--item-gap));
 
     padding: var(--section-padding);
+
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 #about {
     flex: 1;
     padding: var(--section-padding);
+
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 #about-image {
@@ -134,15 +140,11 @@ main {
     body {
         display: flex;
         align-items: center;
-        overflow: hidden;
 
         padding-bottom: 0;
     }
 
     main {
-        overflow-y: auto;
-        overflow-x: hidden;
-
         padding-bottom: var(--section-bottom-padding);
         width: fit-content;
         min-width: max(20em, 50dvw);
@@ -150,9 +152,6 @@ main {
     }
 
     #about {
-        overflow-y: auto;
-        overflow-x: hidden;
-
         padding-bottom: var(--section-bottom-padding);
         max-height: var(--section-height);
         width: 40dvw;

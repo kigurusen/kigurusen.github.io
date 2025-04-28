@@ -2,6 +2,7 @@
 
 #logo {
     width: var(--main-img-size);
+    border-radius: var(--border-radius);
 }
 
 #info {
@@ -10,6 +11,14 @@
     gap: var(--item-gap);
 
     padding: var(--section-padding-no-h1);
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#info p {
+    max-width: 100%;
+    overflow-x: auto;
 }
 
 ul {
@@ -29,6 +38,9 @@ main {
     gap: var(--item-gap);
 
     padding: var(--section-padding-no-h1);
+
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 main a {
@@ -48,15 +60,11 @@ main a {
     body {
         display: flex;
         align-items: center;
-        overflow: hidden;
 
         padding-bottom: 0;
     }
 
     #info {
-        overflow-y: auto;
-        overflow-x: hidden;
-
         padding-bottom: var(--section-bottom-padding);
         width: fit-content;
         min-width: max(20em, 50dvw);
@@ -65,9 +73,6 @@ main a {
     }
 
     main {
-        overflow-y: auto;
-        overflow-x: hidden;
-
         padding-bottom: var(--section-bottom-padding);
         max-height: var(--section-height-no-h1);
         width: 40dvw;
