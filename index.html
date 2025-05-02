@@ -1,30 +1,102 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html
+    lang="en-GB"
+    prefix="og: https://ogp.me/ns#">
     <head>
+        <!-- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ -->
+        <!-- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡴⠛⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ -->
+        <!-- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⠛⢠⡀⠸⣆⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ -->
+        <!-- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡼⡁⢰⣋⡇⠀⡿⢳⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠤⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ -->
+        <!-- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡼⠁⣏⠉⠛⠳⢤⣟⠀⢧⠀⠀⣀⣤⣠⣤⣄⣀⠀⠀⢷⠀⠀⠈⠙⠢⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ -->
+        <!-- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⡔⠃⣀⠘⢆⣀⠀⠀⠉⠀⠘⠚⠉⠀⠀⢀⡀⠀⢸⠇⣀⢸⡀⠀⠀⠀⠀⠈⢧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ -->
+        <!-- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⠙⡾⠟⣷⠂⠉⠀⠀⠀⠀⠀⠀⠀⢶⢚⣹⠃⢠⡏⠀⡏⠹⠃⠀⠀⠀⠀⠀⢸⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ -->
+        <!-- ⢀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣼⠇⣰⠀⠀⠀⠠⠶⠳⣦⠀⠀⠀⠘⠲⠃⢠⠟⠁⠀⡏⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ -->
+        <!-- ⠈⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠏⡟⠷⠟⠁⠀⠀⣴⡆⠀⢸⡇⠀⠀⢠⣄⡴⠏⠀⡀⢰⠇⠀⠀⠀⠀⠀⠀⢠⡾⠚⠋⠉⠉⢳⡀⠀⠀⠀⠀⠀ -->
+        <!-- ⠀⢹⡌⠙⢷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⢧⡐⠶⠄⠀⠀⠻⣃⡀⠸⡷⠀⠀⠀⠹⣆⠀⢀⡿⡏⠀⠀⠀⠀⠀⠀⣠⡾⠀⠀⠀⢀⡴⠟⠁⠀⠀⠀⠀⠀ -->
+        <!-- ⠀⠀⢷⠀⠀⠻⣷⣄⠀⠀⠀⠀⠀⠀⢀⣀⡀⠀⠙⠦⣤⣀⡀⠀⠘⠿⠇⠀⣤⠴⣶⣞⣁⣠⣾⡀⠀⠀⣤⣠⣴⠶⢾⣁⣧⠀⠀⠀⠈⢧⡤⠖⠚⠦⣄⡀⠀ -->
+        <!-- ⠀⠀⠘⡇⠀⠀⠈⠻⣷⡀⠀⠀⣠⢾⡉⢉⡍⠙⠳⣶⢟⣯⣭⠿⠷⣤⡀⣠⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠛⠚⠻⠀⠀⠀⠀⠈⣇⠀⠀⠀⠀⠙⣦ -->
+        <!-- ⠀⠀⠀⢹⡀⠀⠀⠀⢿⣧⠀⠀⢧⣸⡀⠘⣇⣴⠀⠀⢘⠛⠛⠀⣰⠊⠻⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣤⣄⣄⡓⣶⠏ -->
+        <!-- ⠀⠀⠀⠀⣧⠀⠀⠀⠈⣿⣆⣠⣤⣭⡭⠿⣹⣿⡋⠉⠛⠓⠒⠴⠃⠀⠀⠀⠀⢠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⣇⠈⠙⠛⠁⠀ -->
+        <!-- ⠀⠀⠀⠀⠈⠳⣄⠀⠀⠸⣿⠉⠀⠈⢻⠞⠙⡾⠁⡀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⣀⣀⣀⣀⣀⣀⣀⣬⠷⠶⠤⢤⣤⣄⣀⣀⣤⣄⡀⣰⠤⢽⠆⠀⠀⠀⠀ -->
+        <!-- ⠀⠀⠀⠀⠀⠀⠈⠳⣄⠀⢿⣧⠀⠀⠘⠷⠾⠷⣼⣅⣀⣀⠀⠀⠀⠀⠀⠀⠸⡅⠀⠀⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠏⠀⠀⠀⠀⠀⠀⠀ -->
+        <!-- ⠀⠀⠀⠀⠀⠀⠀⠀⠘⢧⡈⡿⣄⣀⣀⣀⣀⣀⣈⣳⣍⠉⠉⠛⢿⡛⢦⡼⠛⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ -->
+        <!-- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠻⠻⠶⠿⠿⠷⠷⠿⠿⠾⠶⠶⠶⠶⠿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ -->
         <title>キグルセン - Homepage</title>
-
-        <meta charset="utf-8" />
-        <meta
-            name="description"
-            content="The main hub for all my public projects, music, art, and more." />
-        <meta
-            property="og:image"
-            content="https://cdn.discordapp.com/icons/1034754062509416499/07971fb5cf80f4fa4bf787a6dc78e8ee.webp" />
-        <meta
-            property="og:url"
-            content="https://kigurusen.github.io" />
-        <meta
-            name="viewport"
-            content="width=device-width,initial-scale=1" />
 
         <link
             rel="stylesheet"
             type="text/css"
-            href="style.css" />
-
+            href="/style.css" />
         <link
             rel="icon"
-            href="img/favicon32.png" />
+            href="/img/favicon32.png" />
+
+        <!-- General Metadata -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width,initial-scale=1" />
+        <link
+            rel="canonical"
+            href="https://kigurusen.github.io" />
+        <meta
+            name="keywords"
+            content="homepage, about, links, social, profiles, projects, art, music" />
+        <meta
+            name="description"
+            content="A collection of my social media profiles and the main hub for all my public projects, music, art, and more." />
+        <meta
+            name="theme-color"
+            content="#121230" />
+        <meta
+            name="color-scheme"
+            content="dark" />
+
+        <!-- General Open Graph Metadata -->
+        <meta
+            property="og:locale"
+            content="en-GB" />
+        <meta
+            property="og:site_name"
+            content="キグルセン" />
+        <meta
+            property="og:url"
+            content="https://kigurusen.github.io" />
+        <meta
+            property="og:title"
+            content="キグルセン - Homepage and Project Hub" />
+        <meta
+            property="og:description"
+            content="A collection of my social media profiles and the main hub for all my public projects, music, art, and more." />
+        <meta
+            name="twitter:card"
+            content="summary" />
+
+        <!-- Open Graph Content Metadata -->
+        <meta
+            property="og:image"
+            content="https://kigurusen.github.io/img/og.png" />
+        <meta
+            property="og:image:alt"
+            content="My original character that I use to represent myself" />
+        <meta
+            property="og:image:type"
+            content="image/png" />
+        <meta
+            property="og:image:width"
+            content="1200" />
+        <meta
+            property="og:image:height"
+            content="630" />
+        <meta
+            property="og:type"
+            content="profile" />
+        <meta
+            property="og:profile:username"
+            content="キグルセン" />
+        <meta
+            property="og:profile:gender"
+            content="male" />
     </head>
     <body>
         <!-- About Me Section -->
@@ -38,7 +110,7 @@
                     tabindex="-1">
                     <img
                         id="about-image"
-                        src="img/aura.webp" />
+                        src="/img/aura.webp" />
                 </a>
                 <p>Hello there!</p>
                 <p>
@@ -65,7 +137,7 @@
                     target="_blank"
                     rel="noopener noreferrer"
                     class="focusable activatable hoverable">
-                    <img src="img/discord.svg" />
+                    <img src="/img/discord.svg" />
                     Community Discord Server
                 </a>
                 <a
@@ -73,7 +145,7 @@
                     target="_blank"
                     rel="noopener noreferrer"
                     class="focusable activatable hoverable">
-                    <img src="img/github.svg" />
+                    <img src="/img/github.svg" />
                     Github Profile
                 </a>
                 <a
@@ -81,7 +153,7 @@
                     target="_blank"
                     rel="noopener noreferrer"
                     class="focusable activatable hoverable">
-                    <img src="img/telegram.svg" />
+                    <img src="/img/telegram.svg" />
                     Telegram Profile
                 </a>
                 <a
@@ -89,7 +161,7 @@
                     target="_blank"
                     rel="noopener noreferrer"
                     class="focusable activatable hoverable">
-                    <img src="img/telegram.svg" />
+                    <img src="/img/telegram.svg" />
                     <span>Telegram Channel and Group Chat</span>
                 </a>
                 <a
@@ -97,7 +169,7 @@
                     target="_blank"
                     rel="noopener noreferrer"
                     class="focusable activatable hoverable">
-                    <img src="img/bluesky.svg" />
+                    <img src="/img/bluesky.svg" />
                     <span>
                         Bluesky Profile <br />
                         (inactive & outdated)
@@ -112,28 +184,16 @@
                 <div class="tile-list">
                     <div class="tile activatable hoverable">
                         <a
-                            href="notnya/"
+                            href="/notnya"
                             class="tile-link focusable">
                         </a>
                         <img
                             class="tile-image"
-                            src="notnya/image.png" />
+                            src="/notnya/image.png" />
                         <h2>NotNya~ Tournament Bot</h2>
                         <div class="tile-description">
                             Helping you host osu! tournaments via Discord
                         </div>
-                        <!-- <a
-                            class="tile-sublink"
-                            href="https://github.com/kigurusen/notnya"
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            Github page
-                        </a> -->
-                        <!-- <a
-                            class="tile-sublink"
-                            href="notnya/changelog.html">
-                            Changelog
-                        </a> -->
                         <!-- <a
                             class="tile-sublink"
                             href="https://discord.com/api/oauth2/authorize?client_id=974614271734448138&permissions=275280743440&scope=bot%20applications.commands"
@@ -141,82 +201,30 @@
                             rel="noopener noreferrer">
                             Add me to your Discord!
                         </a> -->
-                    </div>
-                    <!-- <div class="tile activatable hoverable">
-                        <a
-                            href="helloworld/"
-                            class="tile-link focusable">
-                        </a>
-                        <img
-                            class="tile-image"
-                            src="img/placeholder.svg" />
-                        <h2>placeholder</h2>
-                        <div class="tile-description">Description Here</div>
-                        <a
+                        <!-- <a
                             class="tile-sublink"
-                            href="helloworld/"
+                            href="/notnya/changelog.html">
+                            Changelog
+                        </a> -->
+                        <!-- <a
+                            class="tile-sublink"
+                            href="https://github.com/kigurusen/notnya"
                             target="_blank"
                             rel="noopener noreferrer">
-                            Github Page
-                        </a>
-                        <a
-                            class="tile-sublink"
-                            href="helloworld/">
-                            Changelog
-                        </a>
-                    </div> -->
+                            Github page
+                        </a> -->
+                    </div>
                 </div>
             </div>
             <!-- Music Section -->
             <!-- <div>
                 <h1>Music</h1>
-                <div class="tile-list">
-                    <div class="tile activatable hoverable">
-                        <a
-                            href="helloworld/"
-                            class="tile-link focusable">
-                        </a>
-                        <img
-                            class="tile-image"
-                            src="img/placeholder.svg" />
-                        <h2>placeholder</h2>
-                        <div class="tile-description music-tags">
-                            Genres/Tags Here
-                        </div>
-                        <div class="tile-description">Description Here</div>
-                        <a
-                            class="tile-sublink"
-                            href="helloworld/"
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            Listen on Placeholder
-                        </a>
-                        <a
-                            class="tile-sublink"
-                            href="helloworld/"
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            Listen on Placeholder
-                        </a>
-                    </div>
-                </div>
+                <div class="tile-list"></div>
             </div> -->
             <!-- Art Section -->
             <!-- <div>
                 <h1>Art</h1>
-                <div class="tile-list art-tile">
-                    <div class="tile activatable hoverable">
-                        <a
-                            href="helloworld/"
-                            class="tile-link focusable">
-                        </a>
-                        <img
-                            class="tile-image"
-                            src="img/placeholder.svg" />
-                        <h2>placeholder</h2>
-                        <div class="tile-description">Description Here</div>
-                    </div>
-                </div>
+                <div class="tile-list art-tile"></div>
             </div> -->
         </main>
         <footer>
@@ -225,22 +233,22 @@
                     href="https://github.com/kigurusen"
                     target="_blank"
                     rel="noopener noreferrer">
-                    <img src="img/github.svg" />
+                    <img src="/img/github.svg" />
                 </a>
                 <a
                     href="https://discord.gg/EXKEfGQ9UM"
                     target="_blank"
                     rel="noopener noreferrer">
-                    <img src="img/discord.svg" />
+                    <img src="/img/discord.svg" />
                 </a>
                 <a
                     href="https://t.me/kigustuff"
                     target="_blank"
                     rel="noopener noreferrer">
-                    <img src="img/telegram.svg" />
+                    <img src="/img/telegram.svg" />
                 </a>
                 <a href="/">
-                    <img src="img/aura.webp" />
+                    <img src="/img/aura.webp" />
                 </a>
             </div>
             <span id="copy"> &copy; キグルセン 2025 </span>
