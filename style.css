@@ -21,26 +21,27 @@ main {
     overflow-x: hidden;
 }
 
+#about h2 {
+    text-align: center;
+}
+
 #about-image {
     width: var(--main-img-size);
 }
 
-#about-text {
-    margin: 0 auto 2em;
-}
-
-#about-links {
+nav {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
 
     width: fit-content;
+    min-width: 50%;
     gap: calc(0.5 * var(--item-gap));
     margin: 0 auto;
     text-align: left;
 }
 
-#about-links a {
+nav a {
     display: flex;
     align-items: center;
 
@@ -52,7 +53,7 @@ main {
     z-index: 1; /* above content to stay clickable */
 }
 
-#about-links img {
+nav img {
     max-height: 3em;
     width: 3em;
     margin: auto 1em;
