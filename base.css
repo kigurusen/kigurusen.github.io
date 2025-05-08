@@ -187,6 +187,21 @@ footer {
 
 /* Unified style for focusable buttons and tiles. */
 .focusable:focus-visible {
+    border-radius: var(--border-radius);
     border: var(--button-border) solid var(--accent-text);
     box-shadow: inset 0 0 2em 1em var(--accent-light);
+}
+
+.section:active {
+    color: var(--accent-text);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .section:hover {
+        color: var(--accent-text);
+    }
+
+    .section:active {
+        color: var(--accent-text-light);
+    }
 }
