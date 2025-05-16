@@ -9,5 +9,8 @@ body {
 }
 
 main {
+    display: flex;
+    flex-direction: column;
     padding: var(--section-padding);
+    gap: calc(2 * var(--item-gap));
 }
