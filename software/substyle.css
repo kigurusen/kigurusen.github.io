@@ -88,7 +88,6 @@ nav a {
 
     main {
         padding-bottom: var(--section-bottom-padding);
-        width: fit-content;
         min-width: max(20em, 50dvw);
         max-height: var(--section-height-no-h1);
         width: 60vw;
