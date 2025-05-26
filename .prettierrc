@@ -1,0 +1,17 @@
+{
+    "tabWidth": 4,
+    "useTabs": false,
+    "bracketSameLine": true,
+    "arrowParens": "always",
+    "bracketSpacing": true,
+    "endOfLine": "lf",
+    "htmlWhitespaceSensitivity": "css",
+    "printWidth": 80,
+    "singleAttributePerLine": true,
+    "singleQuote": true,
+    "quoteProps": "consistent",
+    "insertPragma": false,
+    "semi": true,
+    "trailingComma": "es5",
+    "overrides": [{ "files": "*.md", "options": { "tabWidth": 2 } }]
+}
