@@ -1,6 +1,6 @@
 ![CodeFactor](https://www.codefactor.io/repository/github/kigurusen/kigurusen.github.io/badge)
 
-### Branch Structure
+# Personal Homepage and Project Hub
 
-The `main` branch is the public website.
-New branches for contribution are created from and merged into the `dev` branch.
+This repository contains the source code of my personal website, a hub for everything I do.
+Most of it is written in plain HTML and CSS, without any JS.
