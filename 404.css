@@ -1,0 +1,37 @@
+@import '/base.css';
+
+body {
+    overflow-y: hidden;
+    padding: 0;
+}
+
+main {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60dvw;
+    transform: translate(-50%, -50%) scale(1.5);
+}
+
+.return {
+    text-wrap: nowrap;
+    z-index: 2;
+    color: var(--accent-text);
+}
+
+.return:active {
+    color: var(--accent-light);
+}
+
+.return:focus-visible {
+    background-color: var(--accent-main);
+    border-radius: 10px;
+    color: var(--accent-text-light);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .return:hover {
+        color: var(--accent-text-light);
+    }
+}
