@@ -72,7 +72,7 @@ If you want to improve or change the website content, here's what you can do:
 
 1. Synchronize your fork with upstream
    ```sh
-   git fetch upstream HEAD
+   git fetch upstream dev
    git rebase FETCH_HEAD
    ```
 2. Fix any merge conflicts and test your changes thoroughly
