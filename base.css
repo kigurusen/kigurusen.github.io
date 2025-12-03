@@ -134,7 +134,7 @@ footer {
     margin-bottom: 0.5em;
 }
 
-@media (min-width: 25em) {
+@media (min-width: 28.5em) {
     :root {
         --footer-height: 4.5em;
     }
