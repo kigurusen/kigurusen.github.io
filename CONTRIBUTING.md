@@ -40,45 +40,10 @@ If you want to improve or change the website content, here's what you can do:
 
 ## Improving the Source Code
 
-### Before You Start
-
-1. Check if a related [open issue][issues] exists already
-2. Message me using [one of my links](website) to discuss the change and how to continue
-
-### Working with Source Code
-
-1. [Fork][fork] the repository
-2. To keep your fork updated, add the current project as an upstream remote
-
-   ```sh
-   # Add upstream remote
-   git remote add upstream git@github.com:kigurusen/kigurusen.github.io.git
-
-   # Update your fork
-   git fetch upstream
-   ```
-
-3. create a new branch with `git switch -c <new-branch-name> origin/dev`
-4. Implement your changes and make sure not to change the website content.
-5. Test your changes on different browsers and devices
-   - Browsers: at least Chrome and Firefox
-   - Operating system: Windows, Android, and ideally Linux
-   - Sizes: multiple samples from 360x640 to 2560x1440 in both landscape and portrait mode
-   - If accessible: Safari on MacOS and iOS
-6. Format the code using [Prettier](https://prettier.io/)
-   - Enabling Format on Save is recommended
-
-### Creating a Pull Request
-
-1. Synchronize your fork with upstream
-   ```sh
-   git fetch upstream dev
-   git rebase FETCH_HEAD
-   ```
-2. Fix any merge conflicts and test your changes thoroughly
-3. [Open a pull request](https://github.com/kigurusen/kigurusen.github.io/compare) with a clear title and description
+Source code contributions to my personal homepage are extremely unlikely.
+Before you start changing anything, please check if a related [open issue][issues] exists already that I didn't assign to myself.
+If there is, please message me using [one of my links](website) to discuss the change and how to continue.
 
 [coc]: /CODE_OF_CONDUCT.md
 [issues]: https://github.com/kigurusen/kigurusen.github.io/issues
-[fork]: https://github.com/kigurusen/kigurusen.github.io/fork
 [website]: https://kigurusen.github.io
