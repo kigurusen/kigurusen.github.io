@@ -1,4 +1,4 @@
-![CodeFactor](https://www.codefactor.io/repository/github/kigurusen/kigurusen.github.io/badge)
+[![CodeFactor](https://www.codefactor.io/repository/github/kigurusen/kigurusen.github.io/badge)](https://www.codefactor.io/repository/github/kigurusen/kigurusen.github.io)
 
 # Personal Homepage and Project Hub
 
